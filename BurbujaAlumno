@@ -1,0 +1,14 @@
+public class BurbujaAlumno 
+{
+
+    public static void main(String[] args) 
+    {
+        Alumno alumnos[] = {new Alumno(" Salvador ", 22640158,70, " ISC "),
+                             new Alumno(" Yahir ", 22640155, 70 , " ISC "),
+                             new Alumno(" Ivan ", 22640177 , 80 , " ISC "),
+                             new Alumno( "Jesus ", 22640112 , 40 , " TICS "),
+                             new Alumno(" Justin ", 22640166 , 87 , "Bioquimica ")};
+        
+    }
+    
+}
