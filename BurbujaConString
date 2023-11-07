@@ -1,0 +1,35 @@
+public class BurbujaConNumeros 
+{
+    public static void main(String[] args) 
+    {
+        int numeros[]={77,22,33,9,0,33,100,2,82,-2,-40};
+        Burbuja(numeros);
+        for(int n: numeros)
+            System.out.print(" " + n + " ");
+    }
+    
+    
+    //METODO BURBUJA
+    public static void Burbuja(int numeros[])
+    {
+        int aux; //intercambio
+        int i, numero_elentos = numeros.length; //ciclos internos
+        boolean s=true; //verificar si pueden seguir habiendo intercambios
+        
+        while(s && --numero_elentos>0)
+        {
+            s = false;
+            for(i=1; i<=numero_elentos; i++)
+            {
+                if(numeros[i-1]>numeros[i])
+                {
+                    aux = numeros[i-1];
+                    numeros[i-1]= numeros[i];
+                    numeros[i] = aux;
+                    s = true;
+                }
+                    
+            }
+        }
+    }  //
+}
