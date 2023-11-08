@@ -1,0 +1,66 @@
+public class BurbujaConString 
+{
+    public static void main(String[] args) 
+    {
+        String nombre[]={" Juan ", " Mario ", " Jesus ", " Justin ", " Alejandre " , " Diego " , " Paloma " , " Hiromi ",
+                                    " Yahir " , " Ivan " , " Abraham " , " Pascual " , " Dafne " , " Mariana ", " Paul ",
+                                    " Oscar ", " Ulises ", " Angel ", " Roberto "};
+        Burbuja(nombre);
+        for(String n: nombre)
+            System.out.print(" " + n + " ");
+            System.out.println(" ");
+        BurbujaInversa(nombre);
+        for(String n: nombre)
+            System.out.print(" " + n + " ");
+        
+    }
+    
+    
+    //METODO BURBUJA
+    public static void Burbuja(String nombre[])
+    {
+        String aux; //intercambio
+        int i, numero_elentos = nombre.length; //ciclos internos
+        boolean s=true; //verificar si pueden seguir habiendo intercambios
+        
+        while(s && --numero_elentos>0)
+        {
+            s = false;
+            for(i=1; i<=numero_elentos; i++)
+            {
+                if(nombre[i-1].compareTo(nombre[i])>0)
+                {
+                    aux = nombre[i-1];
+                    nombre[i-1]= nombre[i];
+                    nombre[i] = aux;
+                    s = true;
+                }
+                    
+            }
+        }
+    } //
+    
+    public static void BurbujaInversa(String nombre[])
+    {
+        String aux; //intercambio
+        int i, numero_elentos = nombre.length; //ciclos internos
+        boolean s=true; //verificar si pueden seguir habiendo intercambios
+        
+        while(s && --numero_elentos>0)
+        {
+            s = false;
+            for(i=1; i<=numero_elentos; i++)
+            {
+                if(nombre[i].compareTo(nombre[i-1])>-1) /*nombre[i-1].compareTo(nombre[i])>1*/
+                {
+                    aux = nombre[i-1];
+                    nombre[i-1]= nombre[i];
+                    nombre[i] = aux;
+                    s = true;
+                }
+                    
+            }
+        }
+    }
+
+}
