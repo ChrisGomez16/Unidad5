@@ -12,7 +12,6 @@ public class Alumno
         this.promedio = promedio;
         this.carrera = carrera;
     }
-
     
     public String getNombre() {
         return nombre;
@@ -42,14 +41,18 @@ public class Alumno
         return carrera;
     }
 
-    public void setCarrera(String carrera) {
+    public void setCarrera(String carrera) {    
         this.carrera = carrera;
     }
 
     @Override
-    public String toString() {
-        return "Alumno{" + "nombre=" + nombre + ", n_control=" + n_control + ", promedio=" + promedio + ", carrera=" + carrera + '}';
+    public String toString() 
+    {
+        return "Alumno{" +
+                "nombre='" + nombre + '\'' +
+                ", n_control=" + n_control +
+                ", promedio=" + promedio +
+                ", carrera='" + carrera + '\'' +
+                '}';
     }
-    
-    
 }
