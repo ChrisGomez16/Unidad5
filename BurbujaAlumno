@@ -1,6 +1,5 @@
 public class BurbujaAlumno 
 {
-
     public static void main(String[] args) 
     {
         Alumno alumnos[] = {
@@ -8,7 +7,10 @@ public class BurbujaAlumno
             new Alumno("Yahir", 22640155, 70, "ISC"),
             new Alumno("Ivan", 22640177, 80, "ISC"),
             new Alumno("Jesus", 22640112, 40, "TICS"),
-            new Alumno("Justin", 22640166, 87, "Bioquimica")
+            new Alumno("Justin", 22640166, 87, "Bioquimica"),
+            new Alumno("Cris", 22640172, 81, "ISC"),
+            new Alumno("Dafne", 22640195, 40, "Administracion"),
+            new Alumno("Mariana", 22640111, 87, "Bioquimica")
         };
 
         Burbuja(alumnos);
@@ -34,9 +36,9 @@ public class BurbujaAlumno
         { aux = false;
             for (int i = 1; i < n; i++) {
                 if (arr[i - 1].getN_control()< arr[i].getN_control()) {
-                    Alumno temp = arr[i - 1];
+                    Alumno posicion = arr[i - 1];
                     arr[i - 1] = arr[i];
-                    arr[i] = temp;
+                    arr[i] = posicion;
                     aux = true;
                 }
             }
@@ -51,9 +53,9 @@ public class BurbujaAlumno
         { aux = false;
             for (int i = 1; i < n; i++) {
                 if (arr[i - 1].getN_control()> arr[i].getN_control()) {
-                    Alumno temp = arr[i - 1];
+                    Alumno posicion = arr[i - 1];
                     arr[i - 1] = arr[i];
-                    arr[i] = temp;
+                    arr[i] = posicion;
                     aux = true;
                 }
             }
