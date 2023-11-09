@@ -3,12 +3,61 @@ public class BurbujaAlumno
 
     public static void main(String[] args) 
     {
-        Alumno alumnos[] = {new Alumno(" Salvador ", 22640158,70, " ISC "),
-                             new Alumno(" Yahir ", 22640155, 70 , " ISC "),
-                             new Alumno(" Ivan ", 22640177 , 80 , " ISC "),
-                             new Alumno( "Jesus ", 22640112 , 40 , " TICS "),
-                             new Alumno(" Justin ", 22640166 , 87 , "Bioquimica ")};
+        Alumno alumnos[] = {
+            new Alumno("Salvador", 22640158, 70, "ISC"),
+            new Alumno("Yahir", 22640155, 70, "ISC"),
+            new Alumno("Ivan", 22640177, 80, "ISC"),
+            new Alumno("Jesus", 22640112, 40, "TICS"),
+            new Alumno("Justin", 22640166, 87, "Bioquimica")
+        };
+
+        Burbuja(alumnos);
+       
+        for (Alumno alumno : alumnos) 
+        {
+            System.out.println(alumno);
+        }
+        System.out.println(" \n");
         
+        BurbujaInversa(alumnos);
+        for (Alumno alumno : alumnos) 
+        {
+            System.out.println(alumno);
+        }
+    }
+    
+    public static void Burbuja(Alumno[] arr) 
+    {
+        int n = arr.length;
+        boolean aux;
+        do 
+        { aux = false;
+            for (int i = 1; i < n; i++) {
+                if (arr[i - 1].getN_control()< arr[i].getN_control()) {
+                    Alumno temp = arr[i - 1];
+                    arr[i - 1] = arr[i];
+                    arr[i] = temp;
+                    aux = true;
+                }
+            }
+        } while (aux);
+    }
+    
+    public static void BurbujaInversa(Alumno[] arr) 
+    {
+        int n = arr.length;
+        boolean aux;
+        do 
+        { aux = false;
+            for (int i = 1; i < n; i++) {
+                if (arr[i - 1].getN_control()> arr[i].getN_control()) {
+                    Alumno temp = arr[i - 1];
+                    arr[i - 1] = arr[i];
+                    arr[i] = temp;
+                    aux = true;
+                }
+            }
+        } while (aux);
     }
     
 }
